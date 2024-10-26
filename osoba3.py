@@ -28,7 +28,7 @@ def zapisz_dane_csv(nazwa_pliku):
 # Nazwa_pliku musi być .csv
 # Jeśli plik nie istnieje zwraca 0
 # Zakładamy, że plik csv jest odpowiednich parametrów
-# czyli możliwy do stworzenie
+# czyli możliwy do stworzenia w zapisz_dane_csv
 def odczytaj_dane_csv(nazwa_pliku)-> int:
     if Path(nazwa_pliku).exists():
         with open(nazwa_pliku, 'r') as plik:
