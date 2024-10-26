@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Nazwa pliku musi być .csv
 # Jeśli plik już istnieje to go zamienia
-def zapisz_dane(nazwa_pliku):
+def zapisz_dane_csv(nazwa_pliku):
 
     # Otwieramy plik
     plik = open(nazwa_pliku, 'w')
@@ -27,7 +27,9 @@ def zapisz_dane(nazwa_pliku):
 
 # Nazwa_pliku musi być .csv
 # Jeśli plik nie istnieje zwraca 0
-def odczytaj_dane(nazwa_pliku)-> int:
+# Zakładamy, że plik csv jest odpowiednich parametrów
+# czyli możliwy do stworzenie
+def odczytaj_dane_csv(nazwa_pliku)-> int:
     if Path(nazwa_pliku).exists():
         with open(nazwa_pliku, 'r') as plik:
             czytelnik = csv.reader(plik, delimiter=';')
@@ -35,7 +37,7 @@ def odczytaj_dane(nazwa_pliku)-> int:
             wiersz = next(czytelnik)
 
             # Sprawdzamy czy wiersz istnieje i jak tak to czytamy czas, gdy Model to "A"
-            if(wiersz and wiersz[0] == "A"):
+            if(wiersz[0] == "A"):
                 czas_int = int(wiersz[2][:-1])
                 return czas_int
 
