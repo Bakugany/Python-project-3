@@ -6,7 +6,7 @@ def zapisz_dane(nazwa_pliku):
     dane = {
         "Model": random.choice(['A', 'B', 'C']),
         "Wynik": random.randrange(0, 1000),
-        "Czas":  random.randrange(0, 1000)
+        "Czas":  str(random.randrange(0, 1000)) + 's'
     }
 
     with open(nazwa_pliku, 'w') as plik:
@@ -16,7 +16,8 @@ def zapisz_dane(nazwa_pliku):
 ### Odczytanie danych z pliku json ###
 def odczytaj_dane(nazwa_pliku):
     with open(nazwa_pliku, 'r') as plik:
-        dane = json.load[plik]
-        if(dane['Model'] == 'A'):
-            return dane['Czas']
+        dane = json.load(plik)
+        if(dane and dane['Model'] == 'A'):
+            ucięty_tekst = dane['Czas'][:-1]
+            return int(ucięty_tekst)
         return 0
