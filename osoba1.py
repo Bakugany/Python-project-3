@@ -6,8 +6,9 @@ rozwiniecia_numerow_na_pelna_nazwe = {1: 'poniedzialek', 2: 'wtorek',
                            3: 'sroda', 4: 'czwartek', 5: 'piatek', 6: 'sobota',
                            7: 'niedziela'}
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(conflict_handler='resolve')
 
+parser.add_argument("-h", action ="store_true")
 parser.add_argument("-t", action = "store_true")
 parser.add_argument("-j", action = "store_true")
 parser.add_argument("--miesiace", nargs = "*",  help = "Miesiące")
@@ -15,6 +16,8 @@ parser.add_argument("--dni", nargs = "*", help = "Dni tygodnia")
 parser.add_argument("--pory", nargs = "*", help = "Pory dnia")
 args = parser.parse_args()
 
+if(args.h == True):
+    print("Aby uzyskać informację o działaniu programu należy przeczytać dołączone README.")
 
 miesiace = []
 for miesiac in args.miesiace:
