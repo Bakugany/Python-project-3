@@ -1,6 +1,6 @@
 import argparse
-
 import osoba2
+
 rozwiniecie_skrot_na_numer={'pn' : 1, 'wt' : 2, 'sr' : 3, 'cz' : 4, 'pt' : 5, 'sob' : 6, 'nd' : 7}
 rozwiniecia_numerow_na_pelna_nazwe = {1: 'poniedzialek', 2: 'wtorek',
                            3: 'sroda', 4: 'czwartek', 5: 'piatek', 6: 'sobota',
