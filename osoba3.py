@@ -26,7 +26,7 @@ def zapisz_dane(nazwa_pliku):
     plik.close()
 
 # Nazwa_pliku musi być .csv
-# Jeśli plik nie istnieje zwraca błąd
+# Jeśli plik nie istnieje zwraca 0
 def odczytaj_dane(nazwa_pliku)-> int:
     if Path(nazwa_pliku).exists():
         with open(nazwa_pliku, 'r') as plik:
