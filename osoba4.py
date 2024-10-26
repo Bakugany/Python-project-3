@@ -1,16 +1,22 @@
-### Zapisywanie danych do pliku json ###
-
 import json
 import random
 
-def create_and_save_data():
+### Zapisywanie danych do pliku json ###
+def zapisz_dane(nazwa_pliku):
     dane = {
         "Model": random.choice(['A', 'B', 'C']),
         "Wynik": random.randrange(0, 1000),
         "Czas":  random.randrange(0, 1000)
     }
 
-    with open("Dane.json", 'w') as plik:
+    with open(nazwa_pliku, 'w') as plik:
         json.dump(dane, plik)
 
-create_and_save_data()
+
+### Odczytanie danych z pliku json ###
+def odczytaj_dane(nazwa_pliku):
+    with open(nazwa_pliku, 'r') as plik:
+        dane = json.load[plik]
+        if(dane['Model'] == 'A'):
+            return dane['Czas']
+        return 0
