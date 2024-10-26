@@ -1,3 +1,4 @@
+#Zapisywanie do .csv
 import csv;
 import random;
 
