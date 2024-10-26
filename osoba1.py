@@ -39,9 +39,9 @@ for dzien in args.dni:
         dni.append(zestaw)
 
 if (args.t == True):
-    tryb = 'r'
+    tryb = 'w'
 else:
-    tryb = 'o'
+    tryb = 'r'
 
 if (args.j == True):
     rozszerzenie = 'json'
