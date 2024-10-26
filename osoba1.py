@@ -31,7 +31,7 @@ dni = []
 for dzien in args.dni:
     napis = dzien.split('-')
     if(len(napis) == 1):
-       dni.append(rozwiniecia_numerow_na_pelna_nazwe[rozwiniecie_skrot_na_numer[napis[0]]])
+       dni.append([rozwiniecia_numerow_na_pelna_nazwe[rozwiniecie_skrot_na_numer[napis[0]]]])
     else:
         zestaw = []
         for i in range(rozwiniecie_skrot_na_numer[napis[0]], rozwiniecie_skrot_na_numer[napis[1]] + 1):
