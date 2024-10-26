@@ -6,18 +6,22 @@ rozwiniecia_numerow_na_pelna_nazwe = {1: 'poniedzialek', 2: 'wtorek',
                            3: 'sroda', 4: 'czwartek', 5: 'piatek', 6: 'sobota',
                            7: 'niedziela'}
 
-parser = argparse.ArgumentParser(conflict_handler='resolve')
+parser = argparse.ArgumentParser()
 
-parser.add_argument("-h", action ="store_true")
-parser.add_argument("-t", action = "store_true")
-parser.add_argument("-j", action = "store_true")
-parser.add_argument("--miesiace", nargs = "*",  help = "Miesiące")
-parser.add_argument("--dni", nargs = "*", help = "Dni tygodnia")
-parser.add_argument("--pory", nargs = "*", help = "Pory dnia")
+parser.add_argument("-t", action = "store_true", help=""
+"Kompilowany z flagą -t pozwala na zapis pliku. Domyślnie pliki są odczytywane.")
+parser.add_argument("-j", action = "store_true", help=""
+"Kompilowany z flagą -j pozwala na działanie na plikach typu json."
+"Domyślnie działamy na plikach na plikach csv jeżeli nie podano tego parametru.")
+parser.add_argument("--miesiace", nargs = "*",  help = ""
+"Przyjmuje ciąg miesięcy podawanych bez przecinków po argumencie nazywamy miesiące ")
+parser.add_argument("--dni", nargs = "*", help = ""
+"Przyjmuje ciąg skrótów nazw dni"
+" (można również podawać przedziały np. pn-pt) podawanych bez przecinków po argumencie nazywamy dni")
+parser.add_argument("--pory", nargs = "*", help = ""
+"Przyjmuje ciąg liter podawanych bez przecinków r lub w oznaczających rano lub wieczór"
+"jeżeli nie podano nic, to domyślnie jest rano. ")
 args = parser.parse_args()
-
-if(args.h == True):
-    print("Aby uzyskać informację o działaniu programu należy przeczytać dołączone README.")
 
 miesiace = []
 for miesiac in args.miesiace:
