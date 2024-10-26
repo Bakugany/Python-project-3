@@ -1,5 +1,6 @@
 import json
 import random
+import os.path
 
 ### Zapisywanie danych do pliku json ###
 def zapisz_dane_json(nazwa_pliku):
@@ -14,6 +15,8 @@ def zapisz_dane_json(nazwa_pliku):
 
 ### Odczytanie danych z pliku json ###
 def odczytaj_dane_json(nazwa_pliku):
+    if(not os.path.isfile(nazwa_pliku)):
+        return 0
     with open(nazwa_pliku, 'r') as plik:
         dane = json.load(plik)
         if(dane and dane['Model'] == 'A'):
