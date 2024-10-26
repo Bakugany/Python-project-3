@@ -9,9 +9,9 @@ rozwiniecia_numerow_na_pelna_nazwe = {1: 'poniedzialek', 2: 'wtorek',
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-t", action = "store_true", help=""
-"Kompilowany z flagą -t pozwala na zapis pliku. Domyślnie pliki są odczytywane.")
+"Uruchomiony z flagą -t pozwala na zapis pliku. Domyślnie pliki są odczytywane.")
 parser.add_argument("-j", action = "store_true", help=""
-"Kompilowany z flagą -j pozwala na działanie na plikach typu json."
+"Uruchomiony z flagą -j pozwala na działanie na plikach typu json."
 "Domyślnie działamy na plikach na plikach csv jeżeli nie podano tego parametru.")
 parser.add_argument("--miesiace", nargs = "*",  help = ""
 "Przyjmuje ciąg miesięcy podawanych bez przecinków po argumencie nazywamy miesiące ")
