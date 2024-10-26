@@ -5,3 +5,5 @@ Domyślnie odpalony jest tryb odczytu pliku w formacie csv.
 Aby zmienić tryb na zapis należy dodać flagę -t.
 Natomiast aby zmienić format na json należy dodać flagę -j.
 Skrypt uruchamiany jest z poziomu pliku osoba1.py
+Dodatkowo odpalenie skryptu z flagą -h wyświetla komunikat, aby
+przeczytać to README
