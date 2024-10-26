@@ -19,7 +19,7 @@ def zapisz_dane_csv(nazwa_pliku):
 
     plik.close()
 
-#nazwa_pliku musi być .csv
+# Nazwa_pliku musi być .csv
 def odczytaj_dane_csv(nazwa_pliku)-> int:
     with open(nazwa_pliku, 'r') as plik:
         czytelnik = csv.reader(plik, delimiter=';')
