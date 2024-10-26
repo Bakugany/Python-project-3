@@ -3,7 +3,7 @@ import csv;
 import random;
 
 # Nazwa pliku musi być .csv
-def zapisz_dane(nazwa_pliku):
+def zapisz_dane_csv(nazwa_pliku):
 
     plik = open(nazwa_pliku, 'w')
     writer = csv.writer(plik, delimiter=';')
@@ -20,7 +20,7 @@ def zapisz_dane(nazwa_pliku):
     plik.close()
 
 #nazwa_pliku musi być .csv
-def odczytaj_dane(nazwa_pliku)-> int:
+def odczytaj_dane_csv(nazwa_pliku)-> int:
     with open(nazwa_pliku, 'r') as plik:
         czytelnik = csv.reader(plik, delimiter=';')
         next(czytelnik)
