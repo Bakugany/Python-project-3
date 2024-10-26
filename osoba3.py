@@ -1,9 +1,8 @@
-#Zapisywanie do .csv
 import csv;
 import random;
 
 #filename jest .csv
-def write_file(filename):
+def zapisz_dane(filename):
 
     plik = open(filename, 'w')
     writer = csv.writer(plik, delimiter=';')
@@ -20,7 +19,7 @@ def write_file(filename):
     plik.close()
 
 #filename jest .csv
-def reading(filename)-> int:
+def odczytaj_dane(filename)-> int:
     with open(filename, 'r') as plik:
         czytelnik = csv.reader(plik, delimiter=';')
         next(czytelnik)
