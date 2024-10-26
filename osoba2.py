@@ -7,13 +7,9 @@ import osoba4 as o4
 def przetwarzanie_plikow(miesiace, dni, pory, tryb, rozszerzenie):
     cnt = 0
     for i in range(len(miesiace)):
-        if(len(dni[i]) == 1):
-            sciezka = os.path.join(os.getcwd(), miesiace[i], dni[i])
+        for j in range(len(dni[i])):
+            sciezka = os.path.join(os.getcwd(), miesiace[i], dni[i][j])
             sciezka = Path(sciezka)
-        else:
-            for j in range(len(dni[i])):
-                sciezka = os.path.join(os.getcwd(), miesiace[i], dni[i][j])
-                sciezka = Path(sciezka)
             
             if len(pory) > cnt:
                 if pory[cnt] == 'rano':
