@@ -3,7 +3,7 @@ import os
 import osoba3 as o3
 import osoba4 as o4
 
-# miesiace = [.], dni = [[.], [.]], pory = [.], tryb = 'rano'/'wieczor', rozszerzenie = 'csv'/'json',
+# miesiace = [.], dni = [[.], [.]], pory = [.], tryb = 'r'/'w', rozszerzenie = 'csv'/'json',
 def przetwarzanie_plikow(miesiace, dni, pory, tryb, rozszerzenie):
     cnt = 0
     for i in range(len(miesiace)):
